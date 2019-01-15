@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Konwerter.ConwertActivity">
+
+
+    <Spinner
+        android:id="@+id/spinner_category"
+        android:layout_width="match_parent"
+        android:layout_height="39dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_weight="1"
+        android:visibility="visible" />
+
+
+    <EditText
+        android:id="@+id/edit_text_value"
+        android:layout_width="217dp"
+        android:layout_height="52dp"
+        android:ems="10"
+        android:hint="Podaj wartosc"
+        android:inputType="numberDecimal"
+        android:selectAllOnFocus="false"
+        android:singleLine="false" />
+
+
+    <Spinner
+        android:id="@+id/spinner_count"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_weight="1"
+        android:minWidth="@dimen/activity_horizontal_margin"
+        android:visibility="visible"
+        android:gravity="center_horizontal"
+        />
+
+
+    <Button
+        android:id="@+id/button_convert"
+        android:layout_width="120dp"
+        android:layout_height="55dp"
+        android:layout_weight="1"
+        android:text="convert"
+        app:layout_constraintTop_toBottomOf="@+id/edit_text_value" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycrel_view_info"
+        android:layout_width="344dp"
+        android:layout_height="275dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_weight="1">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_weight="0"
+        app:menu="@menu/navigation" />
+</LinearLayout>
